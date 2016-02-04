@@ -2,12 +2,12 @@
 <project-module
   type="WEB"
   name="Estore"
-  id="myeclipse.1445397256912"
+  id="myeclipse.1454558238684"
   context-root="/Estore"
   j2ee-spec="5.0"
   archive="Estore.war">
   <attributes>
-    <attribute name="webrootdir" value="/WebRoot" />
+    <attribute name="webrootdir" value="WebRoot" />
   </attributes>
 </project-module>
 

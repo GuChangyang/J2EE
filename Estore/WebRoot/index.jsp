@@ -1,30 +1,19 @@
-<%@ page language="java" import="java.util.*" pageEncoding="ISO-8859-1"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix = 'c' %>
-
+<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
   <head>
-    <base href="<%=basePath%>">
-    
-    <title>My JSP 'index.jsp' starting page</title>
-    
-	<meta http-equiv="pragma" content="no-cache">
-	<meta http-equiv="cache-control" content="no-cache">
-	<meta http-equiv="expires" content="0">    
-	<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
-	<meta http-equiv="description" content="This is my page">
-	<!--
-	<link rel="stylesheet" type="text/css" href="styles.css">
-	-->
-
   </head>
-  
   <body>
-   <h1> Estore<h10><hr>
-   <c:if test="${sessionScope.user == null}">
-            
-   
-   </c:if>
-   
+  	<h1>Estore</h1><hr>
+  	<c:if test="${sessionScope.user == null}">
+  		欢迎光临,游客
+  		<a href="/Estore/regist.jsp">注册</a>
+  		<a href="/Estore/login.jsp">登录</a>
+  	</c:if>
+  	<c:if test="${sessionScope.user != null}">
+  		欢迎回来,${sessionScope.user.username }
+  		<a href="/LogoutServlet">注销</a>
+  	</c:if>
   </body>
 </html>
